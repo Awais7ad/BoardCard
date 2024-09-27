@@ -108,10 +108,10 @@ function CardInfo(props) {
       date,
     });
   };
-
-  useEffect(() => {
-    if (props.updateCard) props.updateCard(props.boardId, values.id, values);
-  }, [values]);
+// eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  if (props.updateCard) props.updateCard(props.boardId, values.id, values);
+}, [values]);
 
   return (
     <Modal onClose={props.onClose}>
